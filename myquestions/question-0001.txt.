@@ -1,0 +1,15 @@
+import pandas as pd
+import numpy as np
+import random
+
+def generar_caso_de_uso_limpiar_datos_clientes():
+    n = random.randint(5, 10)
+    df = pd.DataFrame({
+        'cliente': [random.choice([" JUAN perez ", "maria GARCIA", " ANA lopez"]) for _ in range(n)],
+        'email': [random.choice(["user@gmail.com", "admin@yahoo.es"]) for _ in range(n)]
+    })
+    input_data = {'df': df.copy()}
+    df_res = df.copy()
+    df_res['cliente'] = df_res['cliente'].str.strip().str.title()
+    df_res['dominio'] = df_res['email'].str.split('@').str[1]
+    return input_data, df_res
