@@ -1,3 +1,8 @@
+import numpy as np
+
+def generar_caso_de_uso():
+    # Datos aleatorios: cargas entre 100 y 500 kN
+    cargas_random = np.random.uniform(100, 500, 10)
 def generar_caso_de_uso():
     # Datos aleatorios: cargas entre 100 y 500 kN
     cargas_random = np.random.uniform(100, 500, 10)
