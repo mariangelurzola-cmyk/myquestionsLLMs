@@ -1,3 +1,8 @@
+import numpy as np
+
+def generar_caso_de_uso():
+    # Generar 49 datos normales y 1 dato final (posible anomalía)
+    base = np.random.normal(100, 5, 49)
 def detectar_anomalia_presion(serie_datos):
     pass
 
